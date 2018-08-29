@@ -1,8 +1,10 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.jorisoudejans'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -17,6 +19,7 @@ android {
     dexOptions {
         preDexLibraries = !rootProject.ext.ci
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
